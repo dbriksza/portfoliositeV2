@@ -23,13 +23,11 @@ const NavBar = () => {
           >
             Resume
           </button>
-          <button
-            className="navButton"
-            id="projectsButton"
-            onClick={() => (setModalState(<Projects />), toggle())}
-          >
-            Projects
-          </button>
+          <a href="#projectContainer">
+            <button className="navButton" id="projectsButton">
+              Projects
+            </button>
+          </a>
           <button
             className="navButton"
             id="contactButton"

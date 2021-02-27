@@ -1,0 +1,677 @@
+/* @import url(https://fonts.googleapis.com/css?family=IBM + Plex + Mono&display=swap); */
+
+body {
+  /* background-color: #FF5A5A; */
+  max-width: 80vw;
+  /* max-height: 100vh; */
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* font-family: "IBM Plex Mono", monospace; */
+  /* background-color: #1e1e20; */
+}
+
+.App {
+  position: relative;
+}
+
+h1 {
+  font-size: 5em;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* Nav Styling */
+
+nav {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navButton {
+  z-index: 999;
+  /* font-family: "IBM Plex Mono", monospace; */
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.navButton:hover {
+  background-color: #72b352;
+}
+.navButton:active {
+  position: relative;
+  top: 1px;
+}
+.navButton:disabled {
+  cursor: not-allowed;
+  color: grey;
+  background-color: orangered;
+}
+
+/* Splash page animations */
+/* 
+.text {
+  border-right: 0.05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+.textanim {
+  position: relative;
+  top: 3vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+#oval {
+  z-index: -1;
+  position: relative;
+  top: 5vh;
+  width: 200px;
+  height: 100px;
+  background: #434c0b;
+  border-radius: 100px / 50px;
+  margin: auto;
+}
+
+#circle {
+  z-index: -1;
+  position: relative;
+  top: 5vh;
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50px;
+  margin: auto;
+}
+
+#trapezoid {
+  border-bottom: 100vw solid whitesmoke;
+  border-left: calc(50vw - 100px) solid transparent;
+  border-right: calc(50vw - 100px) solid transparent;
+  height: 0;
+  width: auto;
+  animation: startoff 4s 1, flicker 5s infinite linear 5s;
+}
+
+.lamp {
+  transform-origin: top center;
+  animation: swing 2s infinite alternate ease-in-out;
+}
+
+.tableset {
+  animation: startoff 4s 1;
+}
+
+.fallover {
+  transform: rotate(90deg);
+  transition: transform 1s ease-in;
+}
+
+.dry {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.water {
+  transform: scale(1);
+  opacity: 0.5;
+  transition: transform 1s 1s, opacity 1s 1s;
+} */
+
+/* Resume Styling */
+
+/* .wet {
+  text-shadow: 0 0 20px #8800ff, 0 0 30px #000000;
+  filter: blur(5px);
+}
+
+.paperdry {
+  opacity: 0;
+}
+
+.paperwet {
+  opacity: 1;
+  filter: blur(2px);
+}
+
+#pf1 {
+  transform: scale(2);
+  margin-top: 400px;
+} */
+
+/* Project Styling */
+
+#projectContainer {
+  background-color: #d9f5e0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  padding: 25px;
+}
+
+h3 {
+  margin: 20px;
+}
+
+.projectBlurbs {
+  margin: 40px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-loading {
+  width: 80%;
+  height: 500px;
+  background: #fff url("assets/loading.gif") no-repeat fixed center;
+}
+
+/* Contact Styling */
+
+input {
+  /* font-family: "IBM Plex Mono", monospace; */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 8px 0;
+  padding: 15px 32px;
+  margin: 4px 2px;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactButton {
+  padding: 0;
+  margin: 10px;
+  border: 0px;
+  border-radius: 3px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.contactButton:hover {
+  filter: brightness(85%);
+}
+
+.bio {
+  background-color: #d9f5e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+/* Animations */
+
+/* @keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes swing {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  11% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  31% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes startoff {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* Media Queries */
+
+/* @media only screen and (max-width: 1400px) {
+  #pf1 {
+    transform: scale(1.5);
+    margin-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #pf1 {
+    transform: scale(1.3);
+    margin-top: 125px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .playAnimButton {
+    display: none;
+  }
+  #pf1 {
+    transform: scale(1);
+    margin-top: 0px;
+  }
+  .pc {
+    display: flex;
+    flex-direction: column;
+  }
+  .c {
+    position: inherit;
+  }
+  .modal {
+    padding: 0;
+    max-width: 100vw;
+  }
+  .x0 {
+    left: 10px;
+    top: 20px;
+  }
+  .x2 {
+    left: 10px;
+    top: 740px;
+  }
+  .h0 {
+    height: 1370px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #oval {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px / 25px;
+  }
+  #trapezoid {
+    border-bottom: 100vh solid whitesmoke;
+    border-left: calc(50vw - 50px) solid transparent;
+    border-right: calc(50vw - 50px) solid transparent;
+  }
+  nav {
+    width: 100%;
+  }
+  .welcome {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+} */
+
+.anitmationContainer {
+  display: flex;
+  flex-direction: column;
+  // position: relative;
+}
+
+.motoranimationcontainer {
+  display: block;
+  position: relative;
+  height: 300px;
+  min-width: 300px;
+  align-items: center;
+  .motoranimbackground {
+    position: relative;
+    background: url("./assets/motorbike_background.png") repeat 0 0;
+    background-size: cover;
+    animation: slide 3s linear infinite;
+    height: 300px;
+    width: 300px;
+    .edgeblurleft {
+      position: absolute;
+      left: 0px;
+      height: 300px;
+      width: 150px;
+    }
+    .edgeblurright {
+      position: absolute;
+      transform: scaleX(-1);
+      right: 0px;
+      height: 300px;
+      width: 150px;
+    }
+  }
+  .motoranim {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .wheel {
+    animation: rotating 0.5s linear infinite;
+  }
+  .plant {
+    animation: plant 0.5s cubic-bezier(0.33333, 0.66667, 0.66667, 1) infinite;
+  }
+  .driver {
+    animation: driver 0.5s cubic-bezier(0.31, 0.44, 0.445, 1.65) infinite;
+  }
+}
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -300px 0;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes plant {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg) translate(5px, -5px);
+  }
+  50% {
+    transform: rotate(10deg) translate(-5px, -5px);
+  }
+  75% {
+    transform: rotate(-7deg) translate(-7px, -8px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes driver {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg) translate(2px, -1px);
+  }
+  50% {
+    transform: rotate(5deg) translate(-3px, -2px);
+  }
+  75% {
+    transform: rotate(-3deg) translate(-4px, -3px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.kevin-motor {
+  background-color: #f8fcff;
+  background-color: #f1f9fd;
+  border-top: 1px solid #ecf1f5;
+}
+.bonus-features-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .motorbike {
+    width: 350px;
+    filter: contrast(105%);
+  }
+
+  .bonus-features-CTA {
+    width: 100%;
+    margin-left: 20px;
+
+    .bonus-features-title {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .bonus-features-description {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+
+    .sign-up-CTA {
+      background-color: #5666fa;
+      color: white;
+      border: none;
+      padding: 10px 37px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: 0.22s ease;
+
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
+
+      &:hover {
+        filter: brightness(130%);
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .bonus-features-container {
+    flex-direction: column;
+
+    .bonus-features-CTA {
+      padding: 0 5%;
+    }
+    .motorbike {
+      width: 250px;
+    }
+    .bonus-features-CTA {
+      margin-left: 0;
+      .fonus-features-title {
+        font-size: 1.2rem;
+      }
+      .bonus-features-description {
+        font-size: 1rem;
+      }
+      .sign-up-CTA {
+        font-size: 1.15rem;
+        width: 50%;
+      }
+    }
+  }
+}
+
+#lampAnim {
+  overflow: hidden;
+  height: 500px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#oval {
+  z-index: -1;
+  position: relative;
+  top: 50px;
+  width: 100px;
+  height: 50px;
+  background: #434c0b;
+  border-radius: 100px / 50px;
+  margin: auto;
+}
+
+#circle {
+  z-index: -1;
+  position: relative;
+  top: 25px;
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50px;
+  margin: auto;
+}
+
+#trapezoid {
+  position: relative;
+  top: 25px;
+  z-index: 5;
+  // opacity: 50%;
+  border-bottom: 500px solid lightyellow;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  height: 0;
+  width: auto;
+  animation: flicker infinite linear 5s;
+}
+
+.lamp {
+  transform-origin: top center;
+  animation: swing 2s infinite alternate ease-in-out;
+}
+
+// .tableset {
+//   // animation: startoff 4s 1;
+// }
+
+.fallover {
+  transform: rotate(90deg);
+  transition: transform 1s ease-in;
+}
+
+.dry {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.water {
+  transform: scale(1);
+  opacity: 0.5;
+  transition: transform 1s 1s, opacity 1s 1s;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes swing {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 50%;
+  }
+  10% {
+    opacity: 50%;
+  }
+  11% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 50%;
+  }
+  16% {
+    opacity: 50%;
+  }
+  17% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 50%;
+  }
+  30% {
+    opacity: 50%;
+  }
+  31% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}

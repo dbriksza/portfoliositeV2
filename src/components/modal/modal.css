@@ -67,7 +67,7 @@
   color: #fff;
 }
 
-/* iframe {
+iframe {
   height: 90vh;
-  width: 90vh;
-} */
+  width: 90vw;
+}

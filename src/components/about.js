@@ -9,10 +9,10 @@ const About = () => {
         a penchant for the little details. I love math and art but I wouldn't
         call myself an expert in either, though they are a great help in my line
         of work. My other interests include gardening, tinkering with
-        electronics, and (do I have to mention...) video games. I get the same
-        joy working with my hands and slapping some code on the keyboard. I'm
-        very personable and always down for a chat, check out my contact info to
-        reach out!
+        electronics, and video games (started out making games, but I haven't
+        kept up my Google Play Store accounts). I get the same joy working with
+        my hands and slapping some code on the keyboard. I'm very personable and
+        always down for a chat, check out my contact info to reach out!
       </p>
     </div>
   );
