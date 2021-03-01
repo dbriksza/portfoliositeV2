@@ -60,98 +60,6 @@ nav {
   background-color: orangered;
 }
 
-/* Splash page animations */
-/* 
-.text {
-  border-right: 0.05em solid;
-  animation: caret 1s steps(1) infinite;
-}
-
-.textanim {
-  position: relative;
-  top: 3vh;
-  text-align: center;
-  font-size: 2rem;
-  color: #fff;
-}
-
-#oval {
-  z-index: -1;
-  position: relative;
-  top: 5vh;
-  width: 200px;
-  height: 100px;
-  background: #434c0b;
-  border-radius: 100px / 50px;
-  margin: auto;
-}
-
-#circle {
-  z-index: -1;
-  position: relative;
-  top: 5vh;
-  width: 30px;
-  height: 30px;
-  background: yellow;
-  border-radius: 50px;
-  margin: auto;
-}
-
-#trapezoid {
-  border-bottom: 100vw solid whitesmoke;
-  border-left: calc(50vw - 100px) solid transparent;
-  border-right: calc(50vw - 100px) solid transparent;
-  height: 0;
-  width: auto;
-  animation: startoff 4s 1, flicker 5s infinite linear 5s;
-}
-
-.lamp {
-  transform-origin: top center;
-  animation: swing 2s infinite alternate ease-in-out;
-}
-
-.tableset {
-  animation: startoff 4s 1;
-}
-
-.fallover {
-  transform: rotate(90deg);
-  transition: transform 1s ease-in;
-}
-
-.dry {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.water {
-  transform: scale(1);
-  opacity: 0.5;
-  transition: transform 1s 1s, opacity 1s 1s;
-} */
-
-/* Resume Styling */
-
-/* .wet {
-  text-shadow: 0 0 20px #8800ff, 0 0 30px #000000;
-  filter: blur(5px);
-}
-
-.paperdry {
-  opacity: 0;
-}
-
-.paperwet {
-  opacity: 1;
-  filter: blur(2px);
-}
-
-#pf1 {
-  transform: scale(2);
-  margin-top: 400px;
-} */
-
 /* Project Styling */
 
 #projectContainer {
@@ -231,144 +139,9 @@ input {
   border-radius: 3px;
 }
 
-/* Animations */
+// Animations
 
-/* @keyframes caret {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes swing {
-  from {
-    transform: rotate(-15deg);
-  }
-  to {
-    transform: rotate(15deg);
-  }
-}
-
-@keyframes flicker {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-  }
-  11% {
-    opacity: 0;
-  }
-  13% {
-    opacity: 1;
-  }
-  16% {
-    opacity: 1;
-  }
-  17% {
-    opacity: 0;
-  }
-  19% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  31% {
-    opacity: 0;
-  }
-  32% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes startoff {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
-
-/* Media Queries */
-
-/* @media only screen and (max-width: 1400px) {
-  #pf1 {
-    transform: scale(1.5);
-    margin-top: 200px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  #pf1 {
-    transform: scale(1.3);
-    margin-top: 125px;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .playAnimButton {
-    display: none;
-  }
-  #pf1 {
-    transform: scale(1);
-    margin-top: 0px;
-  }
-  .pc {
-    display: flex;
-    flex-direction: column;
-  }
-  .c {
-    position: inherit;
-  }
-  .modal {
-    padding: 0;
-    max-width: 100vw;
-  }
-  .x0 {
-    left: 10px;
-    top: 20px;
-  }
-  .x2 {
-    left: 10px;
-    top: 740px;
-  }
-  .h0 {
-    height: 1370px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #oval {
-    width: 100px;
-    height: 50px;
-    border-radius: 50px / 25px;
-  }
-  #trapezoid {
-    border-bottom: 100vh solid whitesmoke;
-    border-left: calc(50vw - 50px) solid transparent;
-    border-right: calc(50vw - 50px) solid transparent;
-  }
-  nav {
-    width: 100%;
-  }
-  .welcome {
-    max-width: 100vw;
-    max-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-} */
-
+//Motorbike Animation Containers
 .anitmationContainer {
   display: flex;
   flex-direction: column;
@@ -411,64 +184,18 @@ input {
     animation: rotating 0.5s linear infinite;
   }
   .plant {
-    animation: plant 0.5s cubic-bezier(0.33333, 0.66667, 0.66667, 1) infinite;
   }
   .driver {
     animation: driver 0.5s cubic-bezier(0.31, 0.44, 0.445, 1.65) infinite;
   }
 }
 
-@keyframes slide {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -300px 0;
-  }
+.plantIdle {
+  animation: plant 0.5s cubic-bezier(0.33333, 0.66667, 0.66667, 1) infinite;
 }
-
-@keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes plant {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-5deg) translate(5px, -5px);
-  }
-  50% {
-    transform: rotate(10deg) translate(-5px, -5px);
-  }
-  75% {
-    transform: rotate(-7deg) translate(-7px, -8px);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-@keyframes driver {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-3deg) translate(2px, -1px);
-  }
-  50% {
-    transform: rotate(5deg) translate(-3px, -2px);
-  }
-  75% {
-    transform: rotate(-3deg) translate(-4px, -3px);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.plantActive {
+  transform-origin: 50% 55% !important;
+  animation: plantFlip 1s linear infinite;
 }
 
 .kevin-motor {
@@ -525,6 +252,85 @@ input {
     }
   }
 }
+
+//Motorbike Animation keyframes
+
+@keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -300px 0;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes plant {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg) translate(5px, -5px);
+  }
+  50% {
+    transform: rotate(10deg) translate(-5px, -5px);
+  }
+  75% {
+    transform: rotate(-7deg) translate(-7px, -8px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes driver {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg) translate(2px, -1px);
+  }
+  50% {
+    transform: rotate(5deg) translate(-3px, -2px);
+  }
+  75% {
+    transform: rotate(-3deg) translate(-4px, -3px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes plantFlip {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+    top: -10%;
+  }
+  50% {
+    transform: rotate(180deg);
+    top: -20%;
+  }
+  75% {
+    transform: rotate(270deg);
+    top: -10%;
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+//Motorbike Animation Media Queries
+
 @media screen and (max-width: 600px) {
   .bonus-features-container {
     flex-direction: column;
@@ -550,6 +356,10 @@ input {
     }
   }
 }
+
+//Lamp Animation
+
+//Lamp Animation Containers
 
 #lampAnim {
   overflow: hidden;
@@ -602,9 +412,7 @@ input {
   animation: swing 2s infinite alternate ease-in-out;
 }
 
-// .tableset {
-//   // animation: startoff 4s 1;
-// }
+//Lamp Animation transforms
 
 .fallover {
   transform: rotate(90deg);
@@ -621,6 +429,8 @@ input {
   opacity: 0.5;
   transition: transform 1s 1s, opacity 1s 1s;
 }
+
+//Lamp Animation keyframes
 
 @keyframes caret {
   50% {

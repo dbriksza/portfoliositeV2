@@ -12,13 +12,21 @@ import cup from "../assets/cup.png";
 import water from "../assets/water.png";
 
 const Animations = () => {
+  const clickHandleMotor = () => {
+    document.getElementById("plant").classList.remove("plantIdle");
+    document.getElementById("plant").classList.add("plantActive");
+    setTimeout(function () {
+      document.getElementById("plant").classList.remove("plantActive");
+      document.getElementById("plant").classList.add("plantIdle");
+    }, 1000);
+  };
   const clickHandle = () => {
     document.getElementById("cup").classList.add("fallover");
     document.getElementById("water").classList.add("water");
   };
   return (
     <div id="animationContainer">
-      <div className="kevinmotor">
+      <div className="kevinmotor" onClick={() => clickHandleMotor()}>
         <div
           className="bonus-features-container"
           // data-aos="fade-right"
@@ -54,7 +62,8 @@ const Animations = () => {
                 style={{ top: "20px" }}
               />
               <img
-                className="motoranim plant"
+                className="motoranim plant plantIdle"
+                id="plant"
                 src={plant}
                 alt="plant"
                 style={{ top: "27px", right: "60px" }}
