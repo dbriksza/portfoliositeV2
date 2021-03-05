@@ -5,8 +5,8 @@ import SFRIMG from "../assets/sfr.PNG";
 
 const Projects = () => {
   return (
-    <div id="projectContainer">
-      <div>
+    <div className="defaultContainer">
+      <div className="projectSingle">
         <h3>
           <a href="https://beyondbothworlds.com/">Beyond Both Worlds</a>
         </h3>
@@ -44,7 +44,7 @@ const Projects = () => {
           <li>Namecheap (CNAME routing/domain)</li>
         </ul>
       </div>
-      <div>
+      <div className="projectSingle">
         <h3>
           <p>Citrics.io</p>
         </h3>
@@ -81,7 +81,7 @@ const Projects = () => {
       <a href="https://github.com/dbriksza/city-data-comparison-fe">
         Citrics.io Frontend on github
       </a>
-      <div>
+      <div className="projectSingle">
         <h3>
           <a href="https://frontend.bw-secret-family-recipes.now.sh">
             Secret Family Recipe
@@ -117,10 +117,10 @@ const Projects = () => {
           <img src={SFRIMG} />
         </a>
       )}
-      <div>
+      <div className="projectSingle">
         <h3>
           <a href="https://github.com/dbriksza/python-scripts">
-            Some Python Scripts!
+            Some Python Scripts
           </a>
         </h3>
         <p class="projectBlurbs">
@@ -142,7 +142,7 @@ const Projects = () => {
           <li>Python 3.8</li>
         </ul>
       </div>
-      <div>
+      <div className="projectSingle">
         <h3>
           <a href="https://github.com/dbriksza/danco_keys">
             Customizeable Macro Keys
