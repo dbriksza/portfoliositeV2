@@ -1,64 +1,157 @@
 import React from "react";
 
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
+
+import MediaQuery from "react-responsive";
 
 import MountainPink from "../assets/mountainPink.png";
 import MountainPurple from "../assets/mountainPurple.png";
 import MountainBlue from "../assets/mountainBlue.png";
 import MountainDarkBlue from "../assets/mountainDarkBlue.png";
 
-// const Background = () => {
-//   return (
-//     <div className="parallax">
-//       {/* <div className="bgElement"></div> */}
-//       {/* <img src={MountainDarkBlue} className="backgroundIMG" />
-//       <img src={MountainBlue} className="backgroundIMG" />
-//       <img src={MountainPurple} className="backgroundIMG" />
-//       <img src={MountainPink} className="backgroundIMG" /> */}
-//       <div className="parallax__layer parallax__layer__0">
-//         <img src={MountainDarkBlue} />
-//       </div>
-//       <div className="parallax__layer parallax__layer__1">
-//         <img src={MountainBlue} />
-//       </div>
-//       <div className="parallax__layer parallax__layer__2">
-//         <img src={MountainPurple} />
-//       </div>
-//       <div className="parallax__layer parallax__layer__3">
-//         <img src={MountainPink} />
-//       </div>
-//       <div className="parallax__cover"></div>
-//     </div>
-//   );
-// };
+import Stars from "../assets/spaceStars.png";
+import StarsReverse from "../assets/spaceStarsReverse.png";
 
 const BackgroundJS = () => {
   return (
-    // <div className="parallax">
-    //   <div className="bgElement"></div>
-    //   <img src={MountainDarkBlue} className="backgroundIMG" />
-    //   <img src={MountainBlue} className="backgroundIMG" />
-    //   <img src={MountainPurple} className="backgroundIMG" />
-    //   <img src={MountainPink} className="backgroundIMG" />
-    //   <div className="parallax__layer parallax__layer__0">
-    //     <img src={MountainDarkBlue} />
-    //   </div>
-    //   <div className="parallax__layer parallax__layer__1">
-    //     <img src={MountainBlue} />
-    //   </div>
-    //   <div className="parallax__layer parallax__layer__2">
-    //     <img src={MountainPurple} />
-    //   </div>
-    //   <div className="parallax__layer parallax__layer__3">
-    //     <img src={MountainPink} />
-    //   </div>
-    //   <div className="parallax__cover"></div>
-    // </div>
-    <Parallax strength={300} style={{ height: "100%", width: "100%" }}>
-      <Background className="custom-bg">
-        <img src="http://www.fillmurray.com/500/320" alt="fill murray" />
-      </Background>
-    </Parallax>
+    <>
+      <MediaQuery maxWidth={1200}>
+        <Parallax
+          id="background"
+          renderLayer={(percentage) => (
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                bottom: `${
+                  percentage * percentage * percentage * percentage * 800 - 800
+                }px`,
+              }}
+            >
+              <img className="parallaxImages" src={MountainPink} />
+            </div>
+          )}
+        >
+          <Parallax
+            renderLayer={(percentage) => (
+              <div
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  bottom: `${
+                    percentage * percentage * percentage * 700 - 700
+                  }px`,
+                }}
+              >
+                <img className="parallaxImages" src={MountainPurple} />
+              </div>
+            )}
+          >
+            <Parallax
+              renderLayer={(percentage) => (
+                <div
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    bottom: `${percentage * percentage * 600 - 600}px`,
+                  }}
+                >
+                  <img className="parallaxImages" src={MountainBlue} />
+                  <img className="parallaxImages space" src={StarsReverse} />
+                </div>
+              )}
+            >
+              <Parallax
+                renderLayer={(percentage) => (
+                  <div
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                      bottom: `${percentage * 500 - 500}px`,
+                    }}
+                  >
+                    <img className="parallaxImages" src={MountainDarkBlue} />
+                    <img className="parallaxImages space" src={Stars} />
+                  </div>
+                )}
+              ></Parallax>
+            </Parallax>
+          </Parallax>
+        </Parallax>
+      </MediaQuery>
+      <MediaQuery minWidth={1201}>
+        <Parallax
+          id="background"
+          renderLayer={(percentage) => (
+            <div
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                bottom: `${
+                  percentage * percentage * percentage * percentage * 800 - 1100
+                }px`,
+              }}
+            >
+              <img className="parallaxImages" src={MountainPink} />
+            </div>
+          )}
+        >
+          <Parallax
+            renderLayer={(percentage) => (
+              <div
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  bottom: `${
+                    percentage * percentage * percentage * 700 - 1000
+                  }px`,
+                }}
+              >
+                <img className="parallaxImages" src={MountainPurple} />
+              </div>
+            )}
+          >
+            <Parallax
+              renderLayer={(percentage) => (
+                <div
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    bottom: `${percentage * percentage * 600 - 900}px`,
+                  }}
+                >
+                  <img className="parallaxImages" src={MountainBlue} />
+                  <img className="parallaxImages space" src={StarsReverse} />
+                </div>
+              )}
+            >
+              <Parallax
+                renderLayer={(percentage) => (
+                  <div
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                      bottom: `${percentage * 500 - 800}px`,
+                    }}
+                  >
+                    <img className="parallaxImages" src={MountainDarkBlue} />
+                    <img className="parallaxImages space" src={Stars} />
+                  </div>
+                )}
+              ></Parallax>
+            </Parallax>
+          </Parallax>
+        </Parallax>
+      </MediaQuery>
+    </>
   );
 };
 

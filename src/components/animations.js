@@ -33,7 +33,7 @@ const Animations = () => {
       <div
         className="animationContainer"
         data-aos="fade-right"
-        data-aos-offset="100"
+        data-aos-offset="-400"
         data-aos-delay="50"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
@@ -92,7 +92,7 @@ const Animations = () => {
         className="animationContainer"
         className="animationContainer"
         data-aos="fade"
-        // data-aos-offset="100"
+        data-aos-offset="-400"
         data-aos-delay="50"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
@@ -113,7 +113,7 @@ const Animations = () => {
               position: "relative",
               bottom: "-100px",
               right: "200px",
-              zIndex: "-1",
+              zIndex: "1",
             }}
           >
             <div className="tableset" style={{ position: "relative" }}>
@@ -122,6 +122,7 @@ const Animations = () => {
               <img
                 src={table}
                 style={{
+                  zIndex: "1",
                   position: "absolute",
                   top: "-250px",
                   left: "-250px",
@@ -140,7 +141,7 @@ const Animations = () => {
                   height: "500px",
                   width: "500px",
                   transformOrigin: "200px 200px",
-                  zIndex: "10",
+                  zIndex: "3",
                 }}
               />
               {/* the water */}
@@ -154,7 +155,7 @@ const Animations = () => {
                   left: "-220px",
                   height: "500px",
                   width: "500px",
-                  zIndex: "5",
+                  zIndex: "2",
                   transformOrigin: "200px 200px",
                 }}
               />
@@ -162,6 +163,7 @@ const Animations = () => {
               <img
                 src={resume}
                 style={{
+                  zIndex: "1",
                   position: "absolute",
                   top: "-250px",
                   left: "-250px",

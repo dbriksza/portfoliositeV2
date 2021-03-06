@@ -5,7 +5,7 @@ import SFRIMG from "../assets/sfr.PNG";
 
 const Projects = () => {
   return (
-    <div className="defaultContainer">
+    <div className="projectContainer" id="projectContainer">
       <div className="projectSingle">
         <h3>
           <a href="https://beyondbothworlds.com/">Beyond Both Worlds</a>

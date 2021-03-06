@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="defaultContainer">
+    <div className="bioContainer">
       <p>
         Hello! My name is Daniel Killian Briksza and I'm a Web Developer. What
         does that mean? Well, I'm kind of a nerd who loves problem solving with
