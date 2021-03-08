@@ -1,5 +1,3 @@
-/* @import url(https://fonts.googleapis.com/css?family=IBM + Plex + Mono&display=swap); */
-
 //Color vars
 $pink: #ff2079;
 $lightpink: #ff2079;
@@ -7,29 +5,42 @@ $purple: #e92efb;
 $blue: #440bd4;
 $darkblue: #04005e;
 
-// @import "compass/css3";
-// @import "compass/functions";
-// @import "~compass/css3";
-
 * {
   box-sizing: border-box;
 }
-
-// html,
-// body{
-//   background-color: #FEDCC8;
-// }
 
 html {
   overflow: auto;
 }
 
+body {
+  max-width: 100vw;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #2d2d2d;
+}
+
+.App {
+  height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 5em;
+  color: white;
+  text-transform: uppercase;
+}
+
 /* line 1, src/compass/compass.scss */
 .parallax {
   perspective: 100px;
-  // width: 100%;
   height: 100%;
-  // position: sticky;
   overflow-x: hidden;
   overflow-y: auto;
   position: absolute;
@@ -96,132 +107,6 @@ html {
   transform: translateZ(0px) scale(1) translateY(200px);
 }
 
-// .four {
-//   fill: $darkblue;
-// }
-// .three {
-//   fill: $blue;
-// }
-// .two {
-//   fill: $purple;
-// }
-// .one {
-//   fill: $pink;
-// }
-
-// .background {
-// width: 100vw;
-// height: 100%;
-// position: sticky;
-// top: 0;
-// position: fixed;
-// top: 0;
-// background-color: $darkblue;
-// background-image: linear-gradient(hsl(10, 90, 66), transparent 70%);
-// mix-blend-mode: difference;
-// bottom: 0;
-// overflow: hidden;
-// left: 0;
-// width: 100%;
-// display: flex;
-// height: 100vh;
-// position: absolute;
-// bottom: 0;
-// overflow-x: hidden;
-// overflow-y: scroll;
-// perspective: 1px;
-// perspective-origin: 0 0;
-// }
-// .backgroundIMG {
-// filter: blur(4px);
-// height: 100px;
-// height: 100%;
-// width: 100vw;
-// position: absolute;
-// position: sticky;
-// top: 0;
-// top: 100px;
-// object-fit: fill;
-// position: sticky;
-// bottom: 0;
-// overflow: hidden;
-// top: 20vh;
-// display: block;
-// bottom: calc(((100px) - (30vw)));
-// transform-origin: 0 0;
-// transform: translateZ(-2px) scale(3);
-// }
-
-// .imgOne,
-// .imgTwo,
-// .imgThree,
-// .imgFour {
-//   position: relative;
-//   background-position: center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   opacity: 0.7;
-
-/*
-    fixed = parallax
-    scroll = normal
-  */
-//   background-attachment: fixed;
-// }
-
-// .imgOne {
-//   background-image: url("./assets/mountainPink.png");
-//   width: 100vw;
-//   height: 100vh;
-// }
-// .imgTwo {
-//   background-image: url("./assets/mountainPurple.png");
-//   width: 100vw;
-//   height: 100vh;
-// }
-// .imgThree {
-//   background-image: url("./assets/mountainBlue.png");
-//   width: 100vw;
-//   height: 100vh;
-// }
-// .imgFour {
-//   background-image: url("./assets/mountainDarkBlue.png");
-//   width: 100vw;
-//   height: 100vh;
-// }
-
-body {
-  /* background-color: #FF5A5A; */
-  max-width: 100vw;
-  height: 100%;
-  /* max-height: 100vh; */
-  /* overflow-x: hidden;*/
-  // overflow-y: hidden;
-  /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  /* font-family: "IBM Plex Mono", monospace; */
-  background-color: #2d2d2d;
-}
-
-.App {
-  // max-width: 80vw;
-  height: 100%;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  // overflow: hidden;
-}
-
-h1 {
-  font-size: 5em;
-  color: white;
-  text-transform: uppercase;
-}
-
 /* Nav Styling */
 
 nav {
@@ -231,9 +116,7 @@ nav {
 }
 
 .navButton {
-  // z-index: 999;
-  /* font-family: "IBM Plex Mono", monospace; */
-  background-color: $pink; /* Green */
+  background-color: $pink;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -263,7 +146,9 @@ nav {
 .projectContainer {
   position: relative;
   top: -100vh;
-  background-color: $lightpink;
+  background-color: #000000cc;
+  // opacity: 80%;
+  color: #fff;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -274,11 +159,36 @@ nav {
   margin-top: 25px;
   margin-bottom: 25px;
   box-shadow: 0px 0px 10px black;
+  font-size: 1.2em;
+  a:link {
+    color: $blue;
+  }
+
+  /* visited link */
+  a:visited {
+    color: $purple;
+  }
+
+  /* mouse over link */
+  a:hover {
+    color: $pink;
+  }
+
+  /* selected link */
+  a:active {
+    color: $darkblue;
+  }
+  img {
+    opacity: 100%;
+  }
 }
 
 .bioContainer {
+  text-align: center;
   position: relative;
-  background-color: $lightpink;
+  background-color: black;
+  opacity: 90%;
+  color: #fff;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -289,6 +199,9 @@ nav {
   margin-top: 25px;
   margin-bottom: 25px;
   box-shadow: 0px 0px 10px black;
+  p {
+    font-size: 1.2em;
+  }
 }
 
 .projectSingle {
@@ -389,19 +302,44 @@ input {
 
 //Motorbike Animation Containers
 .animationContainer {
+  white-space: pre-wrap;
   position: relative;
-  // z-index: 10;
   padding: 50px;
   top: -100vh;
-  // margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 25px;
   border-radius: 10px;
-  // display: flex;
-  // flex-direction: column;
-  background-color: $purple;
-  // position: relative;
+  background-color: black;
+  opacity: 90%;
+  color: #fff;
   box-shadow: 0px 0px 10px black;
+  display: flex;
+  flex-direction: row;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.scrollingText {
+  margin: 25px;
+  display: inline-block;
+  animation: floatText 30s infinite linear;
+  padding-top: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.scrollingText:hover {
+  animation-play-state: paused;
+}
+@keyframes floatText {
+  to {
+    transform: translateY(-100%);
+  }
+}
+.textActive {
+  color: $pink;
+}
+.textInactive {
+  color: $blue;
 }
 
 .motoranimationcontainer {
@@ -438,8 +376,6 @@ input {
   }
   .wheel {
     animation: rotating 0.5s linear infinite;
-  }
-  .plant {
   }
   .driver {
     animation: driver 0.5s cubic-bezier(0.31, 0.44, 0.445, 1.65) infinite;
@@ -653,8 +589,6 @@ input {
 #trapezoid {
   position: relative;
   top: 25px;
-  // z-index: 5;
-  // opacity: 50%;
   border-bottom: 500px solid lightyellow;
   border-left: 200px solid transparent;
   border-right: 200px solid transparent;

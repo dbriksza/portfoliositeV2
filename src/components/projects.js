@@ -8,7 +8,9 @@ const Projects = () => {
     <div className="projectContainer" id="projectContainer">
       <div className="projectSingle">
         <h3>
-          <a href="https://beyondbothworlds.com/">Beyond Both Worlds</a>
+          <a href="https://beyondbothworlds.com/" target="_blank">
+            Beyond Both Worlds
+          </a>
         </h3>
         <p class="projectBlurbs">
           The largest project I've ever worked on by myself. I worked on this
@@ -78,12 +80,18 @@ const Projects = () => {
         on the DS side. However, you can find the git repos below for an idea of
         how the site worked.
       </p>
-      <a href="https://github.com/dbriksza/city-data-comparison-fe">
+      <a
+        href="https://github.com/dbriksza/city-data-comparison-fe"
+        target="_blank"
+      >
         Citrics.io Frontend on github
       </a>
       <div className="projectSingle">
         <h3>
-          <a href="https://frontend.bw-secret-family-recipes.now.sh">
+          <a
+            href="https://frontend.bw-secret-family-recipes.now.sh"
+            target="_blank"
+          >
             Secret Family Recipe
           </a>
         </h3>
@@ -119,7 +127,7 @@ const Projects = () => {
       )}
       <div className="projectSingle">
         <h3>
-          <a href="https://github.com/dbriksza/python-scripts">
+          <a href="https://github.com/dbriksza/python-scripts" target="_blank">
             Some Python Scripts
           </a>
         </h3>
@@ -144,7 +152,7 @@ const Projects = () => {
       </div>
       <div className="projectSingle">
         <h3>
-          <a href="https://github.com/dbriksza/danco_keys">
+          <a href="https://github.com/dbriksza/danco_keys" target="_blank">
             Customizeable Macro Keys
           </a>
         </h3>
