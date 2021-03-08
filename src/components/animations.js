@@ -47,6 +47,26 @@ const Animations = () => {
   const clickHandle = () => {
     document.getElementById("cup").classList.add("fallover");
     document.getElementById("water").classList.add("water");
+    document.getElementById("dryText").classList.remove("textActive");
+    document.getElementById("dryText").classList.add("textInactive");
+    document.getElementById("falloverText").classList.remove("textInactive");
+    document.getElementById("falloverText").classList.add("textActive");
+    setTimeout(function () {
+      document.getElementById("falloverText").classList.remove("textActive");
+      document.getElementById("falloverText").classList.add("textInactive");
+      document.getElementById("waterText").classList.remove("textInactive");
+      document.getElementById("waterText").classList.add("textActive");
+    }, 1000);
+  };
+  const setTable = () => {
+    document.getElementById("cup").classList.remove("fallover");
+    document.getElementById("water").classList.remove("water");
+    document.getElementById("dryText").classList.add("textActive");
+    document.getElementById("dryText").classList.remove("textInactive");
+    document.getElementById("falloverText").classList.add("textInactive");
+    document.getElementById("falloverText").classList.remove("textActive");
+    document.getElementById("waterText").classList.add("textInactive");
+    document.getElementById("waterText").classList.remove("textActive");
   };
   return (
     <>
@@ -61,7 +81,7 @@ const Animations = () => {
         data-aos-once="true"
         data-aos-anchor-placement="top-center"
       >
-        <div style={{ maxHeight: "300px" }}>
+        <div style={{ maxHeight: "300px", overflowY: "hidden" }}>
           <p className="scrollingText">
             {`.motoranimationcontainer {
   display: block;
@@ -131,41 +151,6 @@ const Animations = () => {
   .motorbike {
     width: 350px;
     filter: contrast(105%);
-  }
-
-  .bonus-features-CTA {
-    width: 100%;
-    margin-left: 20px;
-
-    .bonus-features-title {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-bottom: 0;
-    }
-
-    .bonus-features-description {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      line-height: 1.4;
-    }
-
-    .sign-up-CTA {
-      background-color: #5666fa;
-      color: white;
-      border: none;
-      padding: 10px 37px;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      transition: 0.22s ease;
-
-      cursor: pointer;
-      &:focus {
-        outline: 0;
-      }
-
-      &:hover {
-        filter: brightness(130%);
-      }
     }
   }
 }
@@ -329,6 +314,117 @@ const Animations = () => {
         data-aos-once="true"
         data-aos-anchor-placement="top-center"
       >
+        <div style={{ maxHeight: "500px", overflowY: "hidden" }}>
+          <p className="scrollingText">{`//Lamp Animation
+
+//Lamp Animation Containers
+
+#lampAnim {
+  overflow: hidden;
+  height: 500px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#oval {
+  // z-index: -1;
+  position: relative;
+  top: 50px;
+  width: 100px;
+  height: 50px;
+  background: #434c0b;
+  border-radius: 100px / 50px;
+  margin: auto;
+}
+
+#circle {
+  // z-index: -1;
+  position: relative;
+  top: 25px;
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  border-radius: 50px;
+  margin: auto;
+}
+
+#trapezoid {
+  position: relative;
+  top: 25px;
+  border-bottom: 500px solid lightyellow;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  height: 0;
+  width: auto;
+  animation: flicker infinite linear 5s;
+}
+
+.lamp {
+  z-index: 2;
+  transform-origin: top center;
+  animation: swing 2s infinite alternate ease-in-out;
+}
+
+//Lamp Animation keyframes
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes swing {
+  from {
+    transform: rotate(-15deg);
+  }
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 50%;
+  }
+  10% {
+    opacity: 50%;
+  }
+  11% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 50%;
+  }
+  16% {
+    opacity: 50%;
+  }
+  17% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 50%;
+  }
+  30% {
+    opacity: 50%;
+  }
+  31% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 50%;
+  }
+}`}</p>
+        </div>
         <div id="lampAnim" onClick={() => clickHandle()}>
           <div className="lamp">
             {/* the light */}
@@ -402,6 +498,37 @@ const Animations = () => {
               />
             </div>
           </div>
+        </div>
+        <div>
+          <p>
+            //Lamp Animation transforms
+            <span id="dryText" className="textActive">
+              {`
+
+.dry {
+  transform: scale(0);
+  opacity: 0;
+}`}
+            </span>
+            <span id="falloverText" className="textInactive">
+              {`
+.fallover {
+  transform: rotate(90deg);
+  transition: transform 1s ease-in;
+}`}
+            </span>
+            <span id="waterText" className="textInactive">
+              {`
+.water {
+  transform: scale(1);
+  opacity: 0.5;
+  transition: transform 1s 1s, opacity 1s 1s;
+}`}
+            </span>
+          </p>
+          <button onClick={() => setTable()} className="navButton">
+            Set Table
+          </button>
         </div>
       </div>
     </>
