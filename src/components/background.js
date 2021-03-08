@@ -93,7 +93,7 @@ const BackgroundJS = () => {
                 width: "100%",
                 height: "100%",
                 bottom: `${
-                  percentage * percentage * percentage * percentage * 800 - 1100
+                  percentage * percentage * percentage * percentage * 800 - 900
                 }px`,
               }}
             >
@@ -109,7 +109,7 @@ const BackgroundJS = () => {
                   width: "100%",
                   height: "100%",
                   bottom: `${
-                    percentage * percentage * percentage * 700 - 1000
+                    percentage * percentage * percentage * 700 - 800
                   }px`,
                 }}
               >
@@ -124,7 +124,7 @@ const BackgroundJS = () => {
                     position: "absolute",
                     width: "100%",
                     height: "100%",
-                    bottom: `${percentage * percentage * 600 - 900}px`,
+                    bottom: `${percentage * percentage * 600 - 700}px`,
                   }}
                 >
                   <img className="parallaxImages" src={MountainBlue} />
@@ -139,7 +139,7 @@ const BackgroundJS = () => {
                       position: "absolute",
                       width: "100%",
                       height: "100%",
-                      bottom: `${percentage * 500 - 800}px`,
+                      bottom: `${percentage * 500 - 600}px`,
                     }}
                   >
                     <img className="parallaxImages" src={MountainDarkBlue} />
