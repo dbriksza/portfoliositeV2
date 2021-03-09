@@ -15,7 +15,6 @@ html {
 
 body {
   max-width: 100vw;
-  height: 100%;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -23,7 +22,7 @@ body {
 }
 
 .App {
-  height: 100%;
+  height: calc((100%)- (100vh));
   position: relative;
   align-items: center;
   justify-content: center;
@@ -110,6 +109,7 @@ h1 {
 /* Nav Styling */
 
 nav {
+  margin-top: 25px;
   width: 45%;
   display: flex;
   justify-content: space-between;
@@ -323,7 +323,7 @@ input {
   margin: 25px;
   display: inline-block;
   animation: floatText 40s infinite linear;
-  padding-top: 100%;
+  // padding-top: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -728,5 +728,8 @@ input {
   }
   .animationContainer {
     top: 0;
+  }
+  .animatedText {
+    display: none;
   }
 }

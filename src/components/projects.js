@@ -12,12 +12,12 @@ const Projects = () => {
             Beyond Both Worlds
           </a>
         </h3>
-        <p class="projectBlurbs">
+        <p className="projectBlurbs">
           The largest project I've ever worked on by myself. I worked on this
           site for a client, and the MVP was restoring content from a WordPress
           blog that is no longer active, and having a new blog with updated
           styling and functionality for the client to use. Generally, this is
-          relatively simple using WP backups and so forth, however, the site had
+          relatively simple using WP backups and so forth; however, the site had
           gone defunct and I did not have access to such luxuaries. Instead, I
           had to get the old blog content from timestamps off the Wayback
           Machine. I built a suite of Python scripts and used some Ruby scripts
@@ -26,7 +26,7 @@ const Projects = () => {
           old blog assets on a webpage, but I encountered the problem that my
           file recovery was only around 98% and several pages were missing. At
           this time I used a Professional service to essentially do the same
-          thing, only with 100% blog post recovery. This service employed it's
+          thing, only with 100% blog post recovery. This service employed its
           own CMS to render the content, so now in order to host this site I had
           to utilize it in addition to WP. Running 2 seperate CMS on a single
           PHP server on an AWS Elastic Beanstalk instance comes with a host of
@@ -36,7 +36,7 @@ const Projects = () => {
         </p>
         <h4>Tech Stack</h4>
         <ul>
-          <li>Wordpress</li>
+          <li>WordPress</li>
           <li>Apache (for development)</li>
           <li>PHP</li>
           <li>AWS Elastic Beanstalk</li>
@@ -50,7 +50,7 @@ const Projects = () => {
         <h3>
           <p>Citrics.io</p>
         </h3>
-        <p class="projectBlurbs">
+        <p className="projectBlurbs">
           Citrics.io is a city data comparison app that was built from scratch
           in 8 weeks. The team that created this consisted of myself and 5 other
           full stack web developers, 3 data scientists, and 1 UX designer. The
@@ -73,19 +73,21 @@ const Projects = () => {
           <li>Mapbox</li>
           <li>AWS Elastic Beanstalk</li>
         </ul>
+        <div style={{ textAlign: "center", padding: "25px" }}>
+          <img src={CitricsIMG} style={{ maxWidth: "75%" }} />
+          <p>
+            Unfortunately, this site has been taken down due to administration
+            costs on the DS side. However, you can find the git repos below for
+            an idea of how the site worked.
+          </p>
+          <a
+            href="https://github.com/dbriksza/city-data-comparison-fe"
+            target="_blank"
+          >
+            Citrics.io Frontend on github
+          </a>
+        </div>
       </div>
-      <img src={CitricsIMG} style={{ maxWidth: "75%" }} />
-      <p>
-        Unfortunately, this site has been taken down due to administration costs
-        on the DS side. However, you can find the git repos below for an idea of
-        how the site worked.
-      </p>
-      <a
-        href="https://github.com/dbriksza/city-data-comparison-fe"
-        target="_blank"
-      >
-        Citrics.io Frontend on github
-      </a>
       <div className="projectSingle">
         <h3>
           <a
@@ -95,7 +97,7 @@ const Projects = () => {
             Secret Family Recipe
           </a>
         </h3>
-        <p class="projectBlurbs">
+        <p className="projectBlurbs">
           Secret Family Recipes, while originally intended to be an online index
           of privately viewable user-generated recipes, ended up being an
           interface for saving recipes locally (The backend developer fell
@@ -112,38 +114,39 @@ const Projects = () => {
           <li>Styled Compnents</li>
           <li>Redux</li>
         </ul>
+        <div style={{ textAlign: "center", padding: "25px" }}>
+          {window.innerWidth >= 700 ? (
+            <iframe
+              className="iframe-loading"
+              src="https://frontend.bw-secret-family-recipes.now.sh"
+            >
+              Sorry your browser does not support inline frames.
+            </iframe>
+          ) : (
+            <a href="https://frontend.bw-secret-family-recipes.now.sh">
+              <img src={SFRIMG} />
+            </a>
+          )}
+        </div>
       </div>
-      {window.innerWidth >= 700 ? (
-        <iframe
-          className="iframe-loading"
-          src="https://frontend.bw-secret-family-recipes.now.sh"
-        >
-          Sorry your browser does not support inline frames.
-        </iframe>
-      ) : (
-        <a href="https://frontend.bw-secret-family-recipes.now.sh">
-          <img src={SFRIMG} />
-        </a>
-      )}
       <div className="projectSingle">
         <h3>
           <a href="https://github.com/dbriksza/python-scripts" target="_blank">
             Some Python Scripts
           </a>
         </h3>
-        <p class="projectBlurbs">
+        <p className="projectBlurbs">
           These python scripts were made to automate the process of editing
           HTMLs. In the process of redoing a blog site, I quickly realized
           editing 500+ pages of HTML would not be efficient without the use of
           some python. These scripts are capable of editing any amount of HTML's
           to remove and add styling, text, bloat, scripts and whatever else.
           There is also functionality to put HTML's in proper directories based
-          on whatever makes the most sense (dates for this blog site) so it
+          on whatever makes the most sense (i.e. dates for a blog site) so it
           would be a fully functional site- including linking the pages to one
-          another so it's fully navigable- so just upload the whole file
-          strcucture to whatever hosting service for a fully working website!
-          (It's not super easy to use, but it's pretty powerful, and with some
-          more work it might get there)
+          another so it's fully navigable. Just upload the whole file strcucture
+          for a fully working website! (It's not super easy to use, but it's
+          pretty powerful, and with some more work it might get there)
         </p>
         <h4>Tech Stack</h4>
         <ul>
@@ -156,15 +159,17 @@ const Projects = () => {
             Customizeable Macro Keys
           </a>
         </h3>
-        <p class="projectBlurbs">
+        <p className="projectBlurbs">
           This is a piece of software that lets the user bind commands to any
           key on the keyboard. Useful for quickly typing messages. I'm planning
           on keeping up with this project and updating the functionality to
-          include some autoclicking and possibly some other features.
+          include autoclicking and some other features.
         </p>
         <h4>Tech Stack</h4>
         <ul>
           <li>Python 3.8</li>
+          <li>tkinter (for GUI)</li>
+          <li>pynput</li>
         </ul>
       </div>
     </div>

@@ -45,18 +45,20 @@ const Animations = () => {
     }, 1000);
   };
   const clickHandle = () => {
-    document.getElementById("cup").classList.add("fallover");
-    document.getElementById("water").classList.add("water");
-    document.getElementById("dryText").classList.remove("textActive");
-    document.getElementById("dryText").classList.add("textInactive");
-    document.getElementById("falloverText").classList.remove("textInactive");
-    document.getElementById("falloverText").classList.add("textActive");
-    setTimeout(function () {
-      document.getElementById("falloverText").classList.remove("textActive");
-      document.getElementById("falloverText").classList.add("textInactive");
-      document.getElementById("waterText").classList.remove("textInactive");
-      document.getElementById("waterText").classList.add("textActive");
-    }, 1000);
+    if (!document.getElementById("cup").classList.contains("fallover")) {
+      document.getElementById("cup").classList.add("fallover");
+      document.getElementById("water").classList.add("water");
+      document.getElementById("dryText").classList.remove("textActive");
+      document.getElementById("dryText").classList.add("textInactive");
+      document.getElementById("falloverText").classList.remove("textInactive");
+      document.getElementById("falloverText").classList.add("textActive");
+      setTimeout(function () {
+        document.getElementById("falloverText").classList.remove("textActive");
+        document.getElementById("falloverText").classList.add("textInactive");
+        document.getElementById("waterText").classList.remove("textInactive");
+        document.getElementById("waterText").classList.add("textActive");
+      }, 1000);
+    }
   };
   const setTable = () => {
     document.getElementById("cup").classList.remove("fallover");
@@ -81,8 +83,11 @@ const Animations = () => {
         data-aos-once="true"
         data-aos-anchor-placement="top-center"
       >
-        <div style={{ maxHeight: "300px", overflowY: "hidden" }}>
-          <p className="scrollingText">
+        <div
+          style={{ maxHeight: "300px", overflowY: "hidden" }}
+          className="animatedText"
+        >
+          <p className="scrollingText" style={{ paddingTop: "60%" }}>
             {`.motoranimationcontainer {
   display: block;
   position: relative;
@@ -314,8 +319,14 @@ const Animations = () => {
         data-aos-once="true"
         data-aos-anchor-placement="top-center"
       >
-        <div style={{ maxHeight: "500px", overflowY: "hidden" }}>
-          <p className="scrollingText">{`//Lamp Animation
+        <div
+          style={{ maxHeight: "500px", overflowY: "hidden" }}
+          className="animatedText"
+        >
+          <p
+            className="scrollingText"
+            style={{ paddingTop: "210%" }}
+          >{`//Lamp Animation
 
 //Lamp Animation Containers
 
@@ -331,7 +342,6 @@ const Animations = () => {
 }
 
 #oval {
-  // z-index: -1;
   position: relative;
   top: 50px;
   width: 100px;
@@ -342,7 +352,6 @@ const Animations = () => {
 }
 
 #circle {
-  // z-index: -1;
   position: relative;
   top: 25px;
   width: 30px;
@@ -499,7 +508,7 @@ const Animations = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="animatedText">
           <p>
             //Lamp Animation transforms
             <span id="dryText" className="textActive">

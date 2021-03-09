@@ -8,7 +8,12 @@ const Resume = () => {
   //   ).contentDocument.body.scrollHeight;
   // }, []);
   return (
-    <iframe src="https://docs.google.com/document/d/e/2PACX-1vTI6bo2MS68u6RJZK2RRxKe7Yupp3ktP-34x9VUpUoQKWVl1H-y7oLNdgOBM0YZxbHpgcFmtvExgSlc/pub?embedded=true"></iframe>
+    <iframe
+      src="https://drive.google.com/file/d/1sjy-FOF8b-FleLL_3JkVC2Hg6-EW2lDv/preview"
+      width="640"
+      height="480"
+    ></iframe>
   );
 };
 export default Resume;
+// https://drive.google.com/file/d/1sjy-FOF8b-FleLL_3JkVC2Hg6-EW2lDv/view?usp=sharing
