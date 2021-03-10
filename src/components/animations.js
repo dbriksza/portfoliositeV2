@@ -73,6 +73,7 @@ const Animations = () => {
   return (
     <>
       <div
+        id="scrollPoint"
         className="animationContainer"
         data-aos="fade-right"
         data-aos-offset="-400"

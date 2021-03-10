@@ -3,13 +3,24 @@ import React, { useState } from "react";
 import Modal from "./modal/modal";
 import useModal from "./modal/useModal";
 import Resume from "./resume";
-import Projects from "./projects";
+// import Projects from "./projects";
 import Contact from "./contact";
 import "./modal/modal.css";
+
+import $ from "jquery";
 
 const NavBar = () => {
   const { isShowing, toggle } = useModal();
   const [modalState, setModalState] = useState();
+
+  const scrollDown = () => {
+    $("html, body").animate(
+      {
+        scrollTop: $("#projectContainer").offset().top - 100,
+      },
+      2000
+    );
+  };
 
   return (
     <>
@@ -23,11 +34,13 @@ const NavBar = () => {
           >
             Resume
           </button>
-          <a href="#projectContainer">
-            <button className="navButton" id="projectsButton">
-              Projects
-            </button>
-          </a>
+          <button
+            className="navButton"
+            id="projectsButton"
+            onClick={() => scrollDown()}
+          >
+            Projects
+          </button>
           <button
             className="navButton"
             id="contactButton"

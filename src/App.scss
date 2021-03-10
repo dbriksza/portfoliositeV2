@@ -22,7 +22,6 @@ body {
 }
 
 .App {
-  height: calc((100%)- (100vh));
   position: relative;
   align-items: center;
   justify-content: center;
@@ -69,6 +68,13 @@ h1 {
   bottom: -200px;
 }
 
+.parallaxSupplement {
+  background-color: #ff2079;
+  height: 40vh;
+  position: relative;
+  bottom: -120vh;
+}
+
 /* line 29, src/compass/compass.scss */
 .parallax__cover {
   background: #2d112b;
@@ -109,6 +115,8 @@ h1 {
 /* Nav Styling */
 
 nav {
+  position: relative;
+  top: 5vh;
   margin-top: 25px;
   width: 45%;
   display: flex;
@@ -145,7 +153,7 @@ nav {
 
 .projectContainer {
   position: relative;
-  top: -100vh;
+  // top: -25vh;
   background-color: #000000cc;
   // opacity: 80%;
   color: #fff;
@@ -184,6 +192,7 @@ nav {
 }
 
 .bioContainer {
+  top: 10vh;
   text-align: center;
   position: relative;
   background-color: black;
@@ -293,23 +302,48 @@ input {
   z-index: -999;
   position: sticky !important;
   // offset-anchor: top;
-  top: 0;
-  height: 100vh;
+  top: -20vh;
+  height: 120vh;
   width: 100%;
 }
 
 // Animations
+
+//CTAs
+
+.scrollCTA {
+  animation: scrollCTAAnim linear infinite 2s;
+}
+
+@keyframes scrollCTAAnim {
+  0% {
+    opacity: 0%;
+  }
+  5% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  95% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+}
 
 //Motorbike Animation Containers
 .animationContainer {
   white-space: pre-wrap;
   position: relative;
   padding: 50px;
-  top: -100vh;
+  // top: -25vh;
   margin-top: 25px;
   margin-bottom: 25px;
   border-radius: 10px;
-  background-color: black;
+  background-color: #000000cc;
   opacity: 90%;
   color: #fff;
   box-shadow: 0px 0px 10px black;
