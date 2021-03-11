@@ -196,7 +196,7 @@ nav {
     color: $darkblue;
   }
   img {
-    opacity: 100%;
+    opacity: 1;
   }
 }
 
@@ -205,7 +205,7 @@ nav {
   text-align: center;
   position: relative;
   background-color: black;
-  opacity: 90%;
+  opacity: 0.9;
   color: #fff;
   border-radius: 10px;
   display: flex;
@@ -337,19 +337,19 @@ input {
 
 @keyframes scrollCTAAnim {
   0% {
-    opacity: 0%;
+    opacity: 0;
   }
   5% {
-    opacity: 0%;
+    opacity: 0;
   }
   50% {
-    opacity: 100%;
+    opacity: 1;
   }
   95% {
-    opacity: 0%;
+    opacity: 0;
   }
   100% {
-    opacity: 0%;
+    opacity: 0;
     transform: translateY(20px);
   }
 }
@@ -431,19 +431,19 @@ input {
 
 @keyframes clickCTAAnim {
   0% {
-    opacity: 0%;
+    opacity: 0;
   }
   5% {
-    opacity: 0%;
+    opacity: 0;
   }
   50% {
-    opacity: 100%;
+    opacity: 1;
   }
   95% {
-    opacity: 0%;
+    opacity: 0;
   }
   100% {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -457,7 +457,7 @@ input {
   margin-bottom: 25px;
   border-radius: 10px;
   background-color: #000000cc;
-  opacity: 90%;
+  opacity: 0.9;
   color: #fff;
   box-shadow: 0px 0px 10px black;
   display: flex;
@@ -790,78 +790,78 @@ input {
     opacity: 0;
   }
   1% {
-    opacity: 50%;
+    opacity: 0.5;
   }
   10% {
-    opacity: 50%;
+    opacity: 0.5;
   }
   11% {
     opacity: 0;
   }
   13% {
-    opacity: 50%;
+    opacity: 0.5;
   }
   16% {
-    opacity: 50%;
+    opacity: 0.5;
   }
   17% {
     opacity: 0;
   }
   19% {
-    opacity: 50%;
+    opacity: 0.5;
   }
   30% {
-    opacity: 50%;
+    opacity: 0.5;
   }
   31% {
     opacity: 0;
   }
   32% {
-    opacity: 50%;
+    opacity: 0.5;
   }
   100% {
-    opacity: 50%;
+    opacity: 0.5;
   }
 }
 
 @keyframes starsAnim {
   0% {
-    opacity: 100%;
+    opacity: 1;
     transform: scale(1);
   }
   1% {
-    opacity: 60%;
+    opacity: 0.6;
   }
   10% {
-    opacity: 60%;
+    opacity: 0.6;
   }
   11% {
-    opacity: 100%;
+    opacity: 1;
   }
   13% {
-    opacity: 60%;
+    opacity: 0.6;
   }
   16% {
-    opacity: 60%;
+    opacity: 0.6;
   }
   17% {
-    opacity: 100%;
+    opacity: 1;
   }
   19% {
-    opacity: 60%;
+    opacity: 0.6;
   }
   30% {
-    opacity: 60%;
+    opacity: 0.6;
   }
   31% {
-    opacity: 100%;
+    opacity: 1;
   }
   32% {
-    opacity: 60%;
+    opacity: 0.6;
     transform: scale(1.005);
   }
   100% {
-    opacity: 60%;
+    opacity: 0.6;
     transform: scale(1);
   }
 }
