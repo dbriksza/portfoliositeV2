@@ -9,11 +9,12 @@ const Resume = () => {
   // }, []);
   return (
     <iframe
-      src="https://drive.google.com/file/d/1sjy-FOF8b-FleLL_3JkVC2Hg6-EW2lDv/preview"
+      className="iframe-loading"
+      src="https://drive.google.com/file/d/1ASQNVTrj6ZoyUeymN7T5achqd95fdNSt/preview"
       width="640"
       height="480"
     ></iframe>
   );
 };
 export default Resume;
-// https://drive.google.com/file/d/1sjy-FOF8b-FleLL_3JkVC2Hg6-EW2lDv/view?usp=sharing
+// https://drive.google.com/file/d/1ASQNVTrj6ZoyUeymN7T5achqd95fdNSt/view?usp=sharing

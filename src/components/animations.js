@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+import ClickCTA from "./clickCTA";
 
 import edgeblur from "../assets/edge_blur.png";
 import backwheel from "../assets/motorbike_back_wheel.png";
@@ -16,7 +18,10 @@ import "aos/dist/aos.css";
 
 const Animations = () => {
   AOS.init();
+  const [motorClicked, setMotorClicked] = useState(false);
+  const [lampClicked, setLampClicked] = useState(false);
   const clickHandleMotor = () => {
+    setMotorClicked(true);
     document.getElementById("plant").classList.remove("plantIdle");
     document.getElementById("plant").classList.add("plantActive");
     document.getElementById("animActiveText1").classList.add("textActive");
@@ -45,6 +50,7 @@ const Animations = () => {
     }, 1000);
   };
   const clickHandle = () => {
+    setLampClicked(true);
     if (!document.getElementById("cup").classList.contains("fallover")) {
       document.getElementById("cup").classList.add("fallover");
       document.getElementById("water").classList.add("water");
@@ -273,6 +279,7 @@ const Animations = () => {
         <div className="kevinmotor" onClick={() => clickHandleMotor()}>
           <div className="bonus-features-container">
             <div className="motoranimationcontainer">
+              {!motorClicked && <ClickCTA />}
               <div className="motoranimbackground">
                 <img className="edgeblurleft" src={edgeblur} />
                 <img className="edgeblurright" src={edgeblur} />
@@ -436,6 +443,7 @@ const Animations = () => {
 }`}</p>
         </div>
         <div id="lampAnim" onClick={() => clickHandle()}>
+          {!lampClicked && <ClickCTA />}
           <div className="lamp">
             {/* the light */}
             <div id="oval">

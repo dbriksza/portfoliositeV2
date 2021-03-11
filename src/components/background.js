@@ -9,8 +9,8 @@ import MountainPurple from "../assets/mountainPurple.png";
 import MountainBlue from "../assets/mountainBlue.png";
 import MountainDarkBlue from "../assets/mountainDarkBlue.png";
 
-import Stars from "../assets/spaceStars.png";
-import StarsReverse from "../assets/spaceStarsReverse.png";
+import Stars from "../assets/spaceNew.png";
+import StarsReverse from "../assets/spaceNewReversed.png";
 
 const BackgroundJS = () => {
   return (

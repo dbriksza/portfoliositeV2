@@ -9,8 +9,10 @@ function App() {
   return (
     <>
       <div className="App">
-        <NavBar />
-        <About />
+        <div id="topBit">
+          <NavBar />
+          <About />
+        </div>
         <BackgroundJS />
         <Animations />
         <Projects />

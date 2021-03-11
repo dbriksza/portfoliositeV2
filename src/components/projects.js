@@ -156,7 +156,7 @@ const Projects = () => {
       <div className="projectSingle">
         <h3>
           <a href="https://github.com/dbriksza/danco_keys" target="_blank">
-            Customizeable Macro Keys
+            Customizable Macro Keys
           </a>
         </h3>
         <p className="projectBlurbs">
