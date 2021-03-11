@@ -263,6 +263,7 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: bioStart cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
 }
 
 .contactButtons {
@@ -291,6 +292,15 @@ input {
   padding: 10px;
   text-align: center;
   border-radius: 3px;
+}
+
+@keyframes bioStart {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 //Parallax
