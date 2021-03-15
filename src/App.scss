@@ -241,7 +241,7 @@ iframe {
 }
 
 .iframe-loading {
-  width: 80%;
+  // width: 80%;
   height: 500px;
   background: #fff url("assets/loading.gif") no-repeat fixed center;
 }
@@ -878,5 +878,32 @@ input {
   }
   .animatedText {
     display: none;
+  }
+  .bioContainer {
+    padding: 5%;
+  }
+  .animationContainer {
+    padding: 5%;
+  }
+  .projectContainer {
+    padding: 5%;
+  }
+  .projectBlurbs {
+    margin: 10px;
+  }
+  .contactButton {
+    margin: auto;
+  }
+  .navButton {
+    padding: 20px;
+  }
+  #scrollPoint {
+    margin-top: 115px;
+  }
+  .scrollCTA {
+    display: none;
+  }
+  #topBit {
+    background-image: none;
   }
 }

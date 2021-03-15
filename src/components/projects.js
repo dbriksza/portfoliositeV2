@@ -114,8 +114,8 @@ const Projects = () => {
           <li>Styled Compnents</li>
           <li>Redux</li>
         </ul>
-        <div style={{ textAlign: "center", padding: "25px" }}>
-          {window.innerWidth >= 700 ? (
+        <div id="SFRIFrame" style={{ textAlign: "center", padding: "25px" }}>
+          {window.innerWidth >= 1450 ? (
             <iframe
               className="iframe-loading"
               src="https://frontend.bw-secret-family-recipes.now.sh"
