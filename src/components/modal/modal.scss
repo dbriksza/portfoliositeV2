@@ -35,6 +35,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  iframe {
+    height: 90vh;
+    width: 90vw;
+  }
 }
 
 .modal-header {
@@ -65,9 +69,4 @@
 .button-default {
   background: #247ba0;
   color: #fff;
-}
-
-iframe {
-  height: 90vh;
-  width: 90vw;
 }

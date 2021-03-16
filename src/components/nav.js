@@ -5,7 +5,7 @@ import useModal from "./modal/useModal";
 import Resume from "./resume";
 // import Projects from "./projects";
 import Contact from "./contact";
-import "./modal/modal.css";
+import "./modal/modal.scss";
 
 import $ from "jquery";
 

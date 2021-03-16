@@ -5,8 +5,8 @@ const Resume = () => {
     <iframe
       className="iframe-loading"
       src="https://drive.google.com/file/d/1epI30PIiO56RBXux1l58MV6ge8gONL2n/preview"
-      width="640"
-      height="480"
+      // width="640"
+      // height="480"
     ></iframe>
   );
 };
